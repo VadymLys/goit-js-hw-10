@@ -110,4 +110,4 @@ function addLeadingZero(value) {
 }
 
 
-flatpickr(inputTimer, options);
+const fp = flatpickr(inputTimer, options);
