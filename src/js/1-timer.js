@@ -1,7 +1,7 @@
-import flatpickr from "flatpickr";
-import iziToast from "izitoast";
-import 'iziToast/dist/iziToast.min.css';
+import flatpickr from 'flatpickr';
 import 'flatpickr/dist/flatpickr.min.css';
+import iziToast from 'izitoast';
+import 'izitoast/dist/css/iziToast.min.css';
 
 const startBtn = document.querySelector('[data-start]');
 const inputTimer = document.querySelector('#datetime-picker');
@@ -9,7 +9,7 @@ const daysData = document.querySelector('[data-days]');
 const hoursData = document.querySelector('[data-hours]');
 const minutesData = document.querySelector('[data-minutes]');
 const secondsData = document.querySelector('[data-seconds]');
-const timer = documment.querySelector('.timer');
+const timer = document.querySelector('.timer');
 
 let userSelectedDate;
 
@@ -53,11 +53,12 @@ function updateTimer(endDate) {
         minutesData.textContent = addLeadingZero(minutes);
         secondsData.textContent = addLeadingZero(seconds);
     }
-} 
-       
-if (diff <= 0) {
+   if (diff <= 0) {
     stopTimer();
 }   
+} 
+       
+
  
 function stopTimer() {
     if (countDownInterval) {
